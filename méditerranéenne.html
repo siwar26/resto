@@ -4,9 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cuisine mediterraneenne</title>
 </head>
 <body>
+    <h2>liste de restaurants mediterraneenne dans sousse </h2>
+    <ul>
+        <li><a href="https://https://www.lemediterranee.com.tn/">Restaurant Le Méditerranée</a></li>
+        <li>Escargot</li>
+        <li>  Restaurant du Peuple</li>
+        
+        
+    </ul>
+    <table border >
+        <caption> Menu </caption>
+        <tr>
+        <th>nom du plat </th>
+        <th>photo </th>
+        <th>prix</th>
+        </tr>
+        <tr>
+            <td>Kamounia de poulpes</td>
+            <td><img src="Kamounia de poulpes.jpg" width="200px" height="140px" alt="Kamounia"></td>
+            <td>28dt</td>
+        </tr>
+        <tr>
+            <td>Brick à l'œuf au thon</td>
+            <td><img src="Brick à l'œuf au thon.jpg" alt="Brick" width="200px" height="140px"></td>
+            <td>20dt</td>
+        </tr>
+        <tr>
+            <td>Couscous Poule</td>
+            <td><img src="Couscous Poule.jpg" alt="Couscous" width="200px" height="140px"></td>
+            <td>40dt</td>
+        </tr>
+        <h2>Formulaire de Commande</h2>
+
+        <form action="traitement.php" method="post" >
+            
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            <br>
+        
+            
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+            <br>
+        
+            
+            <label for="adresse">Adresse :</label>
+            <input type="text" id="adresse" name="adresse" required>
+            <br>
+        
+            
+            <label for="restaurant">Choisissez un restaurant :</label>
+            <select id="restaurant" name="restaurant" required>
+                <option value="Restaurant Le Méditerranée">Restaurant Le Méditerranée</option>
+                <option value="Restaurant du Peuple">Restaurant du Peuple</option>
+                <option value="Escargot">Escargot</option>
+               
+            </select>
+            <br>
+        
+            
+            <label for="plat">Choisissez un plat :</label>
+            <select id="plat" name="plat" required>
+                <option value="Kamounia de poulpes">Kamounia de poulpes</option>
+                <option value="Brick à l'œuf au thon">Brick à l'œuf au thon</option>
+                <option value="Couscous Poule">Couscous Poule</option>
+               
+            </select>
+            <br>
+        
+            <input type="submit" value="Commander" onclick="afficherMessage()" >
+        </form>
+        <script>
+            function afficherMessage() {
+                
     
+               
+                alert("La commande est validée. Merci!");
+    
+              
+                window.location.href = "confirmation.html";
+               
+                
+            }
+        </script>
 </body>
 </html>

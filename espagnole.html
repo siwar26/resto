@@ -4,9 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cuisine espagnole</title>
 </head>
 <body>
+    <h2>liste de restaurants espagnole dans sousse </h2>
+
+    <ul>
+        <li>Le Tapeo</li>
+        <li>Tapas locas</li>
+        <li>Le Palais Café Et Resto</li>
+        <li>Jobi Sousse</li>
+        <li>Dolce Vita</li>
+    </ul>
+<table border >
+<caption> Menu </caption>
+<tr>
+<th>nom du plat </th>
+<th>photo </th>
+<th>prix</th>
+</tr>
+<tr>
+    <td>paella aux fruits de mer</td>
+    <td><img src="paella aux fruits de mer.jpg" width="200px" height="140px" alt="paella"></td>
+    <td>29dt</td>
+</tr>
+<tr>
+    <td>tapas espagnoles</td>
+    <td><img src="tapas.jpg" alt="tapas" width="200px" height="140px"></td>
+    <td>35dt</td>
+</tr>
+<tr>
+    <td>Tortilla de patatas</td>
+    <td><img src="Tortilla de patatas.jpg" alt="Tortilla de patatas" width="200px" height="140px"></td>
+    <td>25dt</td>
+</tr>
+
+<h2>Formulaire de Commande</h2>
+
+<form action="traitement.php" method="post" onsubmit="return validerCommande()" >
+    
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required>
+    <br>
+
+    
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom" name="prenom" required>
+    <br>
+
+    
+    <label for="adresse">Adresse :</label>
+    <input type="text" id="adresse" name="adresse" required>
+    <br>
+
+    
+    <label for="restaurant">Choisissez un restaurant :</label>
+    <select id="restaurant" name="restaurant" required>
+        <option value="Le Tapeo">Le Tapeo</option>
+        <option value="Tapas locas">Tapas locas</option>
+        <option value="Le Palais Café Et Resto">Le Palais Café Et Resto</option>
+        <option value="Jobi Sousse">Jobi Sousse</option>
+        <option value="Dolce Vita">Dolce Vita</option>
+    </select>
+    <br>
+
+    
+    <label for="plat">Choisissez un plat :</label>
+    <select id="plat" name="plat" required>
+        <option value="paella aux fruits de mer">paella aux fruits de mer</option>
+        <option value="tapas espagnoles">tapas espagnoles</option>
+        <option value="Tortilla de patatas">Tortilla de patatas</option>
+       
+    </select>
+    <br>
+
+    <input type="submit" value="Commander">
+</form>
+<script>
+    function validerCommande() {
+       
+
+        
+        window.location.href = "confirmation.html";
+
+        
+        return false;
+    }
+</script>
+
+
+
+</table>
     
 </body>
 </html>

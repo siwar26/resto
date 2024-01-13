@@ -4,9 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> cuisine italienne   </title>
 </head>
 <body>
+    <h2>liste de restaurants italienne dans sousse </h2>
+<ol>
+<li>L'ARTISTO</li>
+<li>L’Aromate </li>
+<li>La Cucina</li> 
+</ol>
+<table border >
+    <caption> Menu </caption>
+    <tr>
+    <th>nom du plat </th>
+    <th>photo </th>
+    <th>prix</th>
+    </tr>
+    <tr>
+        <td>Les lasagnes</td>
+        <td><img src="Les lasagnes.jpg" width="200px" height="140px" alt="lasagnes"></td>
+        <td>15dt</td>
+    </tr>
+    <tr>
+        <td>Risotto alla milanese</td>
+        <td><img src="Risotto alla milanese.jpg" alt="Risotto" width="200px" height="140px"></td>
+        <td>25dt</td>
+    </tr>
+    <tr>
+        <td>La pizza napolitaine.</td>
+        <td><img src="La pizza napolitaine..jpg" alt="pizza" width="200px" height="140px"></td>
+        <td>13dt</td>
+    </tr>
+    <h2>Formulaire de Commande</h2>
+
+<form action="traitement.php" method="post" onsubmit="return validerCommande()" >
     
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required>
+    <br>
+
+    
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom" name="prenom" required>
+    <br>
+
+    
+    <label for="adresse">Adresse :</label>
+    <input type="text" id="adresse" name="adresse" required>
+    <br>
+
+    
+    <label for="restaurant">Choisissez un restaurant :</label>
+    <select id="restaurant" name="restaurant" required>
+        <option value="L'ARTISTO">L'ARTISTO</option>
+        <option value="L’Aromate">L’Aromate</option>
+        <option value="La Cucina">La Cucina</option>
+       
+    </select>
+    <br>
+
+    
+    <label for="plat">Choisissez un plat :</label>
+    <select id="plat" name="plat" required>
+        <option value="Les lasagnes">Les lasagnes</option>
+        <option value="Risotto alla milanese">Risotto alla milanese</option>
+        <option value="La pizza napolitaine">La pizza napolitaine</option>
+       
+    </select>
+    <br>
+
+    <input type="submit" value="Commander">
+</form>
+<script>
+    function validerCommande() {
+       
+
+        
+        window.location.href = "confirmation.html";
+
+        
+        return false;
+    }
+</script>
 </body>
 </html>

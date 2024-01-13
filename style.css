@@ -1,0 +1,33 @@
+body {
+    text-align: center; /* Centre le texte horizontalement dans le corps */
+}
+
+
+
+h1 {
+    color: mediumvioletred;
+    font-size: 36px; 
+    font-family: 'Arial', sans-serif; 
+    margin: 50px 0;
+}
+.maClasse {
+    color: blue;
+    font-size: 16px;
+    padding: 10px;
+}
+p
+{
+    color:blue;
+    font-size: 24px; 
+    font-family: 'Arial', sans-serif;
+}
+h2{
+    color: pink;
+    font-size: 26px;
+    padding: 20px;
+}
+h3{
+    color:black;
+    font-size: 30px;
+    padding: 25px;
+}

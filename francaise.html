@@ -4,9 +4,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cuisine francaise</title>
+    
+   
 </head>
 <body>
+    <h2>liste de restaurants francaise dans sousse </h2>
+
+    <ul>
+        <li>The First, Coffee & Resto</li>
+        <li>Sea Side Café & Resto</li>
+        <li>Restaurant Club House</li>
+        
+        
+    </ul>
+    <table border >
+        <caption> Menu </caption>
+        <tr>
+        <th>nom du plat </th>
+        <th>photo </th>
+        <th>prix</th>
+        </tr>
+        <tr>
+            <td>Les escargots persillés</td>
+            <td><img src="Les escargots persillés.jpg" width="200px" height="140px" alt="escargots"></td>
+            <td>39dt</td>
+        </tr>
+        <tr>
+            <td>Les huîtres</td>
+            <td><img src="Les huîtres.jpg" alt="huîtres" width="200px" height="140px"></td>
+            <td>33dt</td>
+        </tr>
+        <tr>
+            <td>Le gratin dauphinois</td>
+            <td><img src="Le gratin dauphinois.jpg" alt="gratin" width="200px" height="140px"></td>
+            <td>23dt</td>
+        </tr>
+        <h2>Formulaire de Commande</h2>
+
+        <form action="traitement.php" method="post"  onsubmit="return validerCommande()" >
+            
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            <br>
+        
+            
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+            <br>
+        
+            
+            <label for="adresse">Adresse :</label>
+            <input type="text" id="adresse" name="adresse" required>
+            <br>
+        
+            
+            <label for="restaurant">Choisissez un restaurant :</label>
+            <select id="restaurant" name="restaurant" required>
+                <option value="The First, Coffee & Resto">The First, Coffee & Resto</option>
+                <option value="Sea Side Café & Resto">Sea Side Café & Resto</option>
+                <option value="Restaurant Club House">Restaurant Club House</option>
+               
+            </select>
+            <br>
+        
+            
+            <label for="plat">Choisissez un plat :</label>
+            <select id="plat" name="plat" required>
+                <option value="Les escargots persillés">Les escargots persillés</option>
+                <option value="Les huîtres">Les huîtres</option>
+                <option value="Le gratin dauphinois">Le gratin dauphinois</option>
+               
+            </select>
+            <br>
+        
+            <input type="submit" value="Commander" onclick="demanderCommentaire()">
+        </form>
+        <script>
+            function validerCommande() {
+               
     
+                
+                window.location.href = "confirmation.html";
+    
+                
+                return false;
+            }
+
+            function demanderCommentaire() {
+            
+            var commentaire = prompt("Veuillez ajouter un commentaire (facultatif):", "");
+
+            
+            if (commentaire !== null) {
+                alert("Merci pour votre commentaire : " + commentaire);
+            }
+        }
+        </script>
 </body>
 </html>
